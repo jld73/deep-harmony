@@ -1,0 +1,17 @@
+# this file has a CDEFG ascending scale, with CDE sarting on the 
+# third beat and E startin on the fifth beat. 
+### title:Test-polyphony (in one file, using backup)
+<sot>
+<time:4/4>
+C-4:1
+D-4:1
+E-4:1
+F-4:1
+G-4:2
+backup:4
+C-4:1
+D-4:1
+E-4:1
+backup:2
+C-4:2
+<eot>

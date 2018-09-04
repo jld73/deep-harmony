@@ -1,0 +1,29 @@
+# this file has a CDEFG scale with a couple of rests.
+#
+# metadata:  hymnalID, number, authorityNumber, title, popularTitle, part
+#
+### title:Sample Piece
+### popularTitle:Sample Piece (popular)
+### composer:Harry Plantinga
+### date:2018
+### hymnalName:Harry's Mut Test Suite
+### hymnalID:HMTS2018
+### number:42
+### authorityNumber:mut_test_42
+### countryOfComposition:USA
+### copyright:Public Domain
+### part:Soprano
+<sot>
+<time:4/4>
+<key:C>
+B-3:1
+<bar> 
+<phrase>
+C-4:1 
+D-4:1 
+E-4:1 
+F-4:1 
+G-4:1
+
+<eot>
+

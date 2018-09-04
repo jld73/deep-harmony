@@ -1,0 +1,9 @@
+# this file has multiple notes on a line, to test parsing
+### title:Test-parsing
+<sot>
+<time:4/4>
+<key:C>
+B-3:1
+<bar> <phrase>
+C-4:1 D-4:1 E-4:1 F-4:1 G-4:1
+<eot>

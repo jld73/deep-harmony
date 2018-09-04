@@ -1,0 +1,13 @@
+# this file has roman numeral chords chords. 
+### Test-rchords
+<sot>
+<time:4/4>
+<key:D>
+rchord-I:2
+rchord-IV:2
+rchord-V7:2
+rchord-viidim7:2
+rchord-biii:2
+rchord-bii6:2
+rchord-I:2
+<eot>

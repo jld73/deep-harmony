@@ -1,0 +1,15 @@
+# test-multiple: tests multiple files. 
+# This file has chords.
+### title:Test of multiple files
+### part:Chords
+<sot>
+<key:Em>
+<time:4/4>
+chord-Em:2
+chord-Bm:1
+chord-G:2
+chord-Am:2
+chord-G:1
+chord-D:1
+chord-G:3
+<eot>

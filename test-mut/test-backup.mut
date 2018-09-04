@@ -1,0 +1,22 @@
+# this file has a CDEFG scale with a couple of rests.
+# backup and forward enable us to put C-5s in the rests.
+#
+# backup, forward
+### title:Test backup, forward
+<sot>
+<time:4/4>
+<key:C>
+<bar>
+<phrase>
+C-4:1 
+D-4:1 
+rest:1 
+E-4:1 
+F-4:1
+rest:1
+G-4:1
+backup:5 
+C-5:1
+forward:2 
+C-5:1
+<eot>

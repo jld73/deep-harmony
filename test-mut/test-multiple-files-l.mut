@@ -1,0 +1,9 @@
+# test-multiple: tests multiple files. 
+# This file has a non-standard part: "Subbass".
+### title:Test of multiple files
+### part:Subbass
+<sot>
+<time:4/4>
+E-2:4
+E-2:4
+<eot>
