@@ -2,7 +2,7 @@
 #
 # given the filename of a mut file, play it
 #
-# bug: it fakes it for slurs, simply reducing note velocity for slurred/tied notes
+# bug: it fakes it for ties, simply reducing note velocity for tied notes
 #
 from mingus.containers import NoteContainer, Note
 from mingus.midi import fluidsynth

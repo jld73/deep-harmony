@@ -1,0 +1,36 @@
+Major tasks:
+
+  mut import/export subconverter 
+    - finish importer for music tokens format 
+      - add rests with chords
+      - handle <bar> indicating pickup measures: make a first pass, count pickup beats, 
+        and add an appropriate number of rests before importing music. Delete the intro 
+        rests at the end.
+    - convert to_mut function to a subconverter
+      - rewrite music2mut to use subconverter
+      - output metadata into mut files
+
+  machine learning mechanics
+    - install a nmt system, get it working
+    - a script convert a collection of music files to training data
+    - a script to generate a container with a training task that can be run on various 
+      computers
+
+  training data preparation
+    - make clean directories of training data for bach, hymns
+    - find training data for additional styles, e.g. jazz, contemporary, ??
+
+  machine learing modifications
+    - use 28-bit representation (pitch class, octave, duration) for notes instead of
+      700+-bit one-hot 
+    - generate more than one translation (haromonization) stochastically
+    - use ML to generate guitar chords
+    - from melody generate chords, then from melody + chords generate bass line, then
+      from all of those generate tenor line, etc. 
+    - learn to determine beat strength from music, text. Better selection of new tunes 
+      for texts. 
+
+  utilities
+    - make sure incipit.py works on test-mut files
+
+

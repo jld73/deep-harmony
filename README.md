@@ -12,10 +12,31 @@ Python3 and music21 are required. The Tensorflow nmt example is the back end we 
 
 Harry Plantinga, 2018
 
-Also included:
+In this directory:
+  * music_tokens.py -- the library of helper functions for converting to/from mut format
+    and for maniuplating music in other ways
+
   * play.py, a python script to play one or more mut files on your computer's speakers 
     (requires fluidsynth, mingus)
-  * test-mut, a directory of music tokens (.mut) files for verifying that play works
-    correctly (and eventually the mut import add-on for music21)
+
+  * test-mut, a directory of music tokens (.mut) files for verifying that play.py and
+    the mut file reader work correctly
+
   * incipit.py, a script that will print out the incipit of a music file (e.g. 
-    11556-65443-32215 for Twinkle, Twinkle Little Stars)
+    11556-65443-32215 for Twinkle, Twinkle Little Stars). Used to tell whether two
+    music files are of the same tune
+
+  * music2mut.py -- read a music file and save all parts (e.g. soprano, alto,
+    tenor, bass) as mut files. 
+
+  * bach -- training data from ~400 bach chorales (from the music21 corpus)
+
+  * hymns -- training data from 7000 (2000 unique?) hymns (midi files). Should be ready 
+    to run experiments with, but not much tested. 
+
+  * music_to_learn: put the training data here for your next experiment
+
+  * test-hymn-melodies.sop: melodies to use for testing the harmony generation. They are 
+    hopefully not prtesent in the Bach chorales so suitable for testing the Bach model,
+    not necessarily other models. 
+    

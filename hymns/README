@@ -1,0 +1,14 @@
+There were many duplicate (or near-duplicate) copies of hymns -- recordings from
+different hymnals.  These caused some hymns to have more effect in training. I 
+think the smaller hymndata directory has about 2000 unique hymns, with one chosen 
+at random from each collection with the same incipit. 
+
+The test4.sop file has the test melodies to generate harmonies for. These hymns
+have hopefully been removed from the hymndata training data. 
+
+Note also that many of the midi files were recordings of human performances and that
+the incipit code does not work well for such files. I believe these have been 
+removed. 
+
+This data isn't really very clean yet; should maybe redo to make sure we have 
+clean midi files with one instance of each unique hymn.
