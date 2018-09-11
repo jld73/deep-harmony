@@ -1,11 +1,8 @@
 Major tasks:
 
-  mut import/export subconverter 
-    - finish importer for music tokens format 
-      - add rests with chords
-      - handle <bar> indicating pickup measures: make a first pass, count pickup beats, 
-        and add an appropriate number of rests before importing music. Delete the intro 
-        rests at the end.
+  mut import/export subconverter
+    - debug, test importer (it's in place but untested and a bit buggy, 
+      especially <bar>/pickup measures and chords.
     - convert to_mut function to a subconverter
       - rewrite music2mut to use subconverter
       - output metadata into mut files

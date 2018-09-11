@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 from music21 import *
 from music_tokens import *
-from mut_parser import *
+# from mut_parser import *
 import sys, re
 
 # print the incipit for a music file -- for example, 11556-65443-32215 

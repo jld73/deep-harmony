@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 from music21 import *
-from music_tokens2 import *
+from music_tokens import *
 from fractions import Fraction 
 from math import ceil
 from pprint import pprint
@@ -29,7 +29,7 @@ def log(s,level):
 def parseData(strData): 
     print("In mutl's parseData")
     #
-    #  first pass, by line: read metadata, ignore comments 
+    #  first pass, by line: read metadata, dump comments 
     #
     strDataList = strData.splitlines()
     newData = ""
@@ -73,9 +73,49 @@ def parseData(strData):
 #   print(pprint(vars(s.metadata)))
 #   print("Partname: {0}".format(s.partName))
 
-
     #
     # now split up into space-separated tokens and process them one at a time
+    #
+    # first pass: count number of pickup beats. Add a rest for the remainder of
+    # the first measure, since music21's makeMeasures function doesn't do pickup beats.
+    # 
+    offset = 0.0
+    quarterlengths_per_measure = 12.0
+    initialRest = None
+
+    strDataList = newData.split()
+    print("First token pass: find pickup beats")
+    for token in strDataList:
+        print("  1. token: {0}".format(token))
+        if token == "<bar>":
+            print("     found <bar>: offset {0}".format(offset))
+            if offset < quarterlengths_per_measure:
+                duration = quarterlengths_per_measure-offset
+                initialRest = note.Rest(quarterLength = duration)
+                print("     adding rest with duration {0}".format(duration))
+#               s.insert(0, initialRest)
+                break
+        elif token.startswith("<time"):
+            print("     found <time> {0}".format(token[6:-1]))
+            num, denom = token[6:-1].split('/')
+            quarterlengths_per_measure = 4.0 * float(num) / float(denom);
+            print("     quarterlengths_per_measure: {0}".format(quarterlengths_per_measure))
+        elif token[0] != '<':
+            note1, durfrac = token.split(':')
+            if durfrac.endswith('t'):       # handle t (tie) after duration
+                durfrac = durfrac[:-1]
+            duration = float(Fraction(durfrac))
+
+            if note1 == "backup":
+                offset -= duration
+            else:
+                offset += duration
+            print("     New offset: {0}".format(offset))
+        elif offset >= quarterlengths_per_measure:
+            break
+
+    #
+    # second pass: import music into music21
     #
     offset = 0.0
     tie_forward = False
@@ -102,10 +142,12 @@ def parseData(strData):
                 if op == "time":
                     m = meter.TimeSignature(val)
                     s.append(m)
+                    if initialRest is not None:
+                        s.insert(0, initialRest)
                 elif op == "key":
                     k = key.Key(val)
                     s.append(k)
-        else:
+        else:           # it's a note, forward backward, rest, or chord
             note1, durfrac = token.split(':')
 
             if durfrac.endswith('t'):       # handle t (tie) after duration
@@ -127,11 +169,13 @@ def parseData(strData):
             elif note1.startswith("chord"):
                 _, chord1 = note1.split('-')
                 h = harmony.ChordSymbol(chord1, quarterLength=duration)
+                n = note.Rest(quarterLength = duration)
                 s.insert(offset, h)
+                s.insert(offset, n)
                 print("Chord: {0} start {1} duration {2}".format(chord1, offset, duration))
                 offset += duration
 
-            else:
+            else:                           # a note
                 note1 = note1.replace('-','')
                 note1 = note1.replace('b', '-')
                 n1 = note.Note(note1)
@@ -162,5 +206,6 @@ s = parseData(data)
 
 print("Parsed music file:")
 s.show('text')         # uncomment to print parsed music file
+s.makeMeasures(inPlace=True)
 s.write('mxl', 'test.musicxml')
 
