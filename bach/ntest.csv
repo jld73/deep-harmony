@@ -1,0 +1,13 @@
+id,sop,alt,ten,bas,nch
+0,a a b c d,b b c b a,a c b c a,b c a d a,0912
+1,a a a c d,b b c b a,a c b c a,b c a d a,0912
+2,a a b c d,b b c b a,a c b s a,b c a d a,0912
+3,a a b c d,b b c b a,a c a c a,b c a d a,0912
+4,a a b c d,c b c b a,a c b c a,b c a d a,0912
+5,a a b c d,b b d b a,a c b c a,b c a d a,0912
+6,a a b c d,a b c b a,a c b c a,b c a d a,0912
+7,a a a c d,b b c b a,a c b c a,b c a d a,0912
+8,a a d c d,b b c b a,a c b c a,b c a d a,0912
+9,a a b c d,b a c b a,a c b c a,b c a d a,0912
+10,a a b c d,b b c b a,a a b c a,b c a d a,0912
+11,a a b c d,b b c b a,a c b c a,b c a c a,0912

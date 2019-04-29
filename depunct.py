@@ -36,7 +36,10 @@ with open(sys.argv[1], 'r') as file:
 		txt = re.sub(r, '#', txt)
 		r = re.compile('over')
 		txt = re.sub(r, '/', txt)
-		txt = re.sub(r, 'over', txt)
+		r = re.compile(',')
+		txt = re.sub(r, ' ', txt)
+		r = re.compile('([abcdefg])([b#]?)-')
+		txt = re.sub(r, lambda m : m.group(1).upper() + m.group(2) + "-", txt)
 		#print(txt)
 		with open("out.csv", 'w') as out:
 			print('writing to out.csv')

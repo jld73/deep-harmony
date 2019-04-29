@@ -1,0 +1,22 @@
+reprocessing:
+    sequence:
+        format: space
+        most_common: 30000
+        sequence_length_limit: 1000
+
+nput_features:
+    -
+        name: sop
+        type: sequence
+        encoder: rnn
+        representation: sparse
+        embedding_size: ;asldkfjas;
+
+output_features:
+    -
+        name: bas
+        type: text
+        decoder: generator
+
+training:
+    batch_size: 96

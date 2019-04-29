@@ -1,0 +1,215 @@
+{
+    "bas": {
+        "char_idx2str": [
+            "<PAD>",
+            "<UNK>",
+            " ",
+            "a",
+            "c",
+            "b",
+            "d"
+        ],
+        "char_max_sequence_length": 9,
+        "char_str2freq": {
+            " ": 48,
+            "<PAD>": 0,
+            "<UNK>": 0,
+            "a": 24,
+            "b": 12,
+            "c": 13,
+            "d": 11
+        },
+        "char_str2idx": {
+            " ": 2,
+            "<PAD>": 0,
+            "<UNK>": 1,
+            "a": 3,
+            "b": 5,
+            "c": 4,
+            "d": 6
+        },
+        "char_vocab_size": 7,
+        "preprocessing": {
+            "char_format": "characters",
+            "char_most_common": 70,
+            "char_sequence_length_limit": 1024,
+            "fill_value": "",
+            "lowercase": true,
+            "missing_value_strategy": "fill_with_const",
+            "padding": "right",
+            "padding_symbol": "<PAD>",
+            "unknown_symbol": "<UNK>",
+            "word_format": "space_punct",
+            "word_most_common": 20000,
+            "word_sequence_length_limit": 256
+        },
+        "word_idx2str": [
+            "<PAD>",
+            "<UNK>",
+            "a",
+            "c",
+            "b",
+            "d"
+        ],
+        "word_max_sequence_length": 5,
+        "word_str2freq": {
+            "<PAD>": 0,
+            "<UNK>": 0,
+            "a": 24,
+            "b": 12,
+            "c": 13,
+            "d": 11
+        },
+        "word_str2idx": {
+            "<PAD>": 0,
+            "<UNK>": 1,
+            "a": 2,
+            "b": 4,
+            "c": 3,
+            "d": 5
+        },
+        "word_vocab_size": 6
+    },
+    "sop": {
+        "char_idx2str": [
+            "<PAD>",
+            "<UNK>",
+            " ",
+            "a",
+            "d",
+            "c",
+            "b"
+        ],
+        "char_max_sequence_length": 9,
+        "char_str2freq": {
+            " ": 48,
+            "<PAD>": 0,
+            "<UNK>": 0,
+            "a": 26,
+            "b": 9,
+            "c": 12,
+            "d": 13
+        },
+        "char_str2idx": {
+            " ": 2,
+            "<PAD>": 0,
+            "<UNK>": 1,
+            "a": 3,
+            "b": 6,
+            "c": 5,
+            "d": 4
+        },
+        "char_vocab_size": 7,
+        "preprocessing": {
+            "char_format": "characters",
+            "char_most_common": 70,
+            "char_sequence_length_limit": 1024,
+            "fill_value": "",
+            "lowercase": true,
+            "missing_value_strategy": "fill_with_const",
+            "padding": "right",
+            "padding_symbol": "<PAD>",
+            "unknown_symbol": "<UNK>",
+            "word_format": "space_punct",
+            "word_most_common": 20000,
+            "word_sequence_length_limit": 256
+        },
+        "word_idx2str": [
+            "<PAD>",
+            "<UNK>",
+            "a",
+            "d",
+            "c",
+            "b"
+        ],
+        "word_max_sequence_length": 5,
+        "word_str2freq": {
+            "<PAD>": 0,
+            "<UNK>": 0,
+            "a": 26,
+            "b": 9,
+            "c": 12,
+            "d": 13
+        },
+        "word_str2idx": {
+            "<PAD>": 0,
+            "<UNK>": 1,
+            "a": 2,
+            "b": 5,
+            "c": 4,
+            "d": 3
+        },
+        "word_vocab_size": 6
+    },
+    "ten": {
+        "char_idx2str": [
+            "<PAD>",
+            "<UNK>",
+            " ",
+            "a",
+            "c",
+            "b",
+            "s"
+        ],
+        "char_max_sequence_length": 9,
+        "char_str2freq": {
+            " ": 48,
+            "<PAD>": 0,
+            "<UNK>": 0,
+            "a": 26,
+            "b": 11,
+            "c": 22,
+            "s": 1
+        },
+        "char_str2idx": {
+            " ": 2,
+            "<PAD>": 0,
+            "<UNK>": 1,
+            "a": 3,
+            "b": 5,
+            "c": 4,
+            "s": 6
+        },
+        "char_vocab_size": 7,
+        "preprocessing": {
+            "char_format": "characters",
+            "char_most_common": 70,
+            "char_sequence_length_limit": 1024,
+            "fill_value": "",
+            "lowercase": true,
+            "missing_value_strategy": "fill_with_const",
+            "padding": "right",
+            "padding_symbol": "<PAD>",
+            "unknown_symbol": "<UNK>",
+            "word_format": "space_punct",
+            "word_most_common": 20000,
+            "word_sequence_length_limit": 256
+        },
+        "word_idx2str": [
+            "<PAD>",
+            "<UNK>",
+            "a",
+            "c",
+            "b",
+            "s"
+        ],
+        "word_max_sequence_length": 5,
+        "word_str2freq": {
+            "<PAD>": 0,
+            "<UNK>": 0,
+            "a": 26,
+            "b": 11,
+            "c": 22,
+            "s": 1
+        },
+        "word_str2idx": {
+            "<PAD>": 0,
+            "<UNK>": 1,
+            "a": 2,
+            "b": 4,
+            "c": 3,
+            "s": 5
+        },
+        "word_vocab_size": 6
+    }
+}
