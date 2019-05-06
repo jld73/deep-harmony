@@ -1,27 +1,15 @@
-preprocssing:
-    sequence:
-        format: space
-        most_common: 30000
-        sequence_length_limit: 1000
-
 input_features:
     -
-        name: sop
+        name: nch
         type: text
         encoder: rnn
+        cell_type: lstm
         representation: sparse
-    -
-        name: ten
-        type: text
-        encoder: rnn
-        representation: sparse
-        tied_weights: sop
 
 output_features:
     -
-        name: bas
+        name: sop
         type: text
-        decoder: generator
 
 training:
     batch_size: 96
