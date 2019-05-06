@@ -1,4 +1,4 @@
-preprocssing:
+preprocessing:
     sequence:
         format: space
         most_common: 30000
@@ -7,15 +7,9 @@ preprocssing:
 input_features:
     -
         name: sop
-        type: text
+        type: sequence
         encoder: rnn
         representation: sparse
-    -
-        name: ten
-        type: text
-        encoder: rnn
-        representation: sparse
-        tied_weights: sop
 
 output_features:
     -
@@ -26,4 +20,4 @@ output_features:
 training:
     batch_size: 96
     epochs: 1000
-    early_stop: 100
+    early_stop: 10
